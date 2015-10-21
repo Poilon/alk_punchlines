@@ -1,3 +1,10 @@
+# A song is a title and the lyrics associated
+# An artist is linked to the song
+
+# Song
+#   title: string
+#   lyrics: text
+#   artist_id: integer
 class Song < ActiveRecord::Base
   belongs_to :artist
 
@@ -5,8 +12,7 @@ class Song < ActiveRecord::Base
     lyrics_array = lyrics.split("\n").reject do |e|
       e.blank? || e.length < 3
     end
-    size = lyrics_array.length
-    random_num = rand(size - 1)
+    random_num = rand(lyrics_array.length - 1)
     [lyrics_array[random_num], lyrics_array[random_num + 1]]
   end
 end
