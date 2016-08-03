@@ -8,11 +8,19 @@
 class Song < ActiveRecord::Base
   belongs_to :artist
 
-  def random_lines
-    lyrics_array = lyrics.split("\n").reject do |e|
+  def random_line_num
+    rand(lyrics_array.length - 1)
+  end
+
+  def find_lyrics(line_num)
+    [lyrics_array[line_num], lyrics_array[line_num + 1]]
+  end
+
+  private
+
+  def lyrics_array
+    @_lyrics_array = lyrics.split("\n").reject do |e|
       e.blank? || e.length < 3
     end
-    random_num = rand(lyrics_array.length - 1)
-    [lyrics_array[random_num], lyrics_array[random_num + 1]]
   end
 end

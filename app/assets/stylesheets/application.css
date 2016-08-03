@@ -30,3 +30,9 @@ body {
 .lyrics {
   margin-top: 30px;
 }
+
+a {
+  color: black;
+  text-decoration: initial;
+  font-size: small;
+}
