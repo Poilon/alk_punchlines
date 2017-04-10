@@ -15,7 +15,11 @@
  */
 
 body {
-  background-color: lightgrey;
+  background-image: url(asset-path('alk.png'));
+  background-size: auto;
+  background-repeat: no-repeat;
+  color: #FFD700;
+  background-color: black;
 }
 
 .content {
@@ -25,14 +29,29 @@ body {
 
 .title {
   margin-top: 40px;
+  font-size: 30px
 }
 
 .lyrics {
   margin-top: 30px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
+.link {
+  margin-top: 100px;
+}
+
+.next {
+  margin-top: 100px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
 a {
-  color: black;
+  color: white;
   text-decoration: initial;
   font-size: small;
 }
