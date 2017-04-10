@@ -8,3 +8,17 @@ br
     = @random_lines[0]
     br
     = @random_lines[1]
+
+
+
+  .link
+    = 'Partager cette punchline :'
+    br
+    = link_to root_url.to_s[0..-2] + punchline_path("#{@song.id}-#{@random_line_num}"), punchline_path("#{@song.id}-#{@random_line_num}")
+    br
+    br
+    = tweet_button(via: 'alkpunchlines', text: @random_lines[0] + "\n" + @random_lines[1] + "\n", url: root_url.to_s[0..-2] + punchline_path("#{@song.id}-#{@random_line_num}"))
+
+
+  .next onclick='location = "/";'
+    = 'NEXT'

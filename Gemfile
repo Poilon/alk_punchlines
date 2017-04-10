@@ -21,6 +21,7 @@ gem 'puma'
 
 gem 'dotenv-rails'
 gem 'genius'
+gem 'tweet-button'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

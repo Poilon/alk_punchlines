@@ -9,11 +9,11 @@ class PunchlinesController < ApplicationController
   end
 
   def show
-    if (song = Song.find_by_id(params[:id].split('-').first))
+    if (@song = Song.find_by_id(params[:id].split('-').first))
       @random_line_num = params[:id].split('-').last.to_i
-      @random_lines = song.try(:find_lyrics, @random_line_num)
-      @title = song.try(:title)
-      @artist = song.try(:artist)
+      @random_lines = @song.try(:find_lyrics, @random_line_num)
+      @title = @song.try(:title)
+      @artist = @song.try(:artist)
     else
       render :song_not_found
     end
