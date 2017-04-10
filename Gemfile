@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -17,6 +17,10 @@ gem 'httparty'
 gem 'json'
 gem 'nokogiri'
 gem 'pg'
+gem 'puma'
+
+gem 'dotenv-rails'
+gem 'genius'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
