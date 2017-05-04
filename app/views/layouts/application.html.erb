@@ -6,6 +6,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<style media="screen">
+  body { background-image: url(<%= "/assets/#{@artist.slug}.png" %>); }
+</style>
 <body>
 
   <%= yield %>

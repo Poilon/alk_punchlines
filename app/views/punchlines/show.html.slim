@@ -14,11 +14,11 @@ br
   .link
     = 'Partager cette punchline :'
     br
-    = link_to root_url.to_s[0..-2] + punchline_path("#{@song.id}-#{@random_line_num}"), punchline_path("#{@song.id}-#{@random_line_num}")
+    = link_to root_url.to_s[0..-2] + artist_punchline_path(@artist, "#{@song.id}-#{@random_line_num}"), artist_punchline_path(@artist, "#{@song.id}-#{@random_line_num}")
     br
     br
-    = tweet_button(via: 'alkpunchlines', text: @random_lines[0] + "\n" + @random_lines[1] + "\n", url: root_url.to_s[0..-2] + punchline_path("#{@song.id}-#{@random_line_num}"))
+    = tweet_button(via: 'alkpunchlines', text: @random_lines[0] + "\n" + @random_lines[1] + "\n", url: root_url.to_s[0..-2] + artist_punchline_path(@artist, "#{@song.id}-#{@random_line_num}"))
 
 
-  .next onclick='location = "/";'
+  .next onclick="location = '/artists/#{@artist.slug}/punchlines';"
     = 'NEXT'

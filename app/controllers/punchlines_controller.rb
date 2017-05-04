@@ -1,7 +1,8 @@
 # Controller of the /punchlines route
 class PunchlinesController < ApplicationController
   def index
-    @song = Song.order('RANDOM()').first
+    @artist = Artist.find(params[:artist_id])
+    @song = @artist.songs.order('RANDOM()').first
     @random_line_num = @song.random_line_num
     @random_lines = @song.try(:find_lyrics, @random_line_num)
     @title = @song.try(:title)

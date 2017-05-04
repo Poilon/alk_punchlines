@@ -61,6 +61,8 @@ GEM
       railties (>= 3.2, < 5.1)
     erubis (2.7.0)
     execjs (2.7.0)
+    friendly_id (5.2.0)
+      activerecord (>= 4.0.0)
     genius (0.1.1)
       httparty (~> 0.11.0)
     globalid (0.3.7)
@@ -175,6 +177,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   dotenv-rails
+  friendly_id
   genius
   httparty
   jbuilder (~> 2.0)
