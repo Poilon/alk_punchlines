@@ -19,7 +19,7 @@ br
     br
 
     .social
-      a href='https://twitter.com/share' class='twitter-share-button' data-url='#{artist_punchline_path(@artist, "#{@song.id}-#{@random_line_num}")}' data-text='#{@random_lines[0] + "\n" + @random_lines[1] + "\n"}' data-count='horizontal' data-via='alkpunchlines'
+      a href='https://twitter.com/share' class='twitter-share-button' data-url='#{artist_punchline_path(@artist, "#{@song.id}-#{@random_line_num}")}' data-text='#{@random_lines[0] + "\n" + @random_lines[1] + "\n" + root_url.to_s[0..-2] +artist_punchline_path(@artist, "#{@song.id}-#{@random_line_num}")}' data-count='horizontal' data-via='alkpunchlines'
         = 'Tweet'
       script type='text/javascript' src='https://platform.twitter.com/widgets.js'
 
