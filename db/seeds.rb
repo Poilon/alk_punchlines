@@ -10,8 +10,8 @@ Genius.access_token = ENV['GENIUS_TOKEN']
   lyrics_links.each do |link|
     html = Nokogiri::HTML(HTTParty.get(link))
     title_selector = '.song_header-primary_info-title'
-    next if Song.find_by_title(html.css(title_selector).text.strip)
     puts html.css(title_selector).text.strip
+    next if Song.find_by_title(html.css(title_selector).text.strip)
     Song.create(
       title: html.css('.song_header-primary_info-title').text.strip,
       lyrics: html.css('.lyrics p').text.gsub(/\[.*\]/, ''),
