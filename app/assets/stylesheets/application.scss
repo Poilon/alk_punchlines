@@ -14,11 +14,24 @@
  *= require_self
  */
 
-body {  
+body {
   background-size: auto;
   background-repeat: no-repeat;
   color: #FFD700;
   background-color: black;
+}
+
+.alkpote {
+  background-image: url(asset-path('alkpote.png'));
+}
+
+.bigflo-oli {
+  background-image: url(asset-path('bigflo-oli.png'));
+}
+
+.orelsan {
+  background-size: 100%;
+  background-image: url(asset-path('orelsan.png'));
 }
 
 .content {
