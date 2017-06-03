@@ -1,6 +1,6 @@
 Genius.access_token = ENV['GENIUS_TOKEN']
 
-[14_388, 15_427, 1286].each do |artist_genius_id|
+[335710].each do |artist_genius_id|
   name = Genius::Artist.find(artist_genius_id).name
   Artist.create(name: name) unless Artist.find_by(name: name)
   artist = Artist.find_by(name: name)
